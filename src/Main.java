@@ -55,6 +55,7 @@ public class Main
                 }else if (menunumber_int==4){       // 전체 데이터 확인
                     Select_All();
                 } else if (menunumber_int ==5 ) {   // 종료
+                    System.out.println("\n 프로그램을 종료합니다 \n");
                     break;
                 }
 
