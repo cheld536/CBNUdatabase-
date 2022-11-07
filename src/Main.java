@@ -66,6 +66,7 @@ public class Main
     }
     /*데이터 삽입 함수 생성 */
     public static void Insert_data() {
+
         /*table 데이터*/
         String Book_id;
         String bookname;
@@ -79,13 +80,13 @@ public class Main
             PreparedStatement stmt = con.prepareStatement(sql);
 
             Scanner scan = new Scanner(System.in);
-            System.out.println("추가할 책 id를 입력하세요 : ");
+            System.out.println("추가 할 책 Book_id를 입력하세요 : ");
             Book_id = scan.nextLine();
-            System.out.println("추가할 책 name을 입력하세요 : ");
+            System.out.println("추가 할 책 Book_name을 입력하세요 : ");
             bookname = scan.nextLine();
-            System.out.println("추가할 책 publisher 입력하세요 : ");
+            System.out.println("추가 할 책 publisher 입력하세요 : ");
             publisher = scan.nextLine();
-            System.out.println("추가할 책 price를 입력하세요 : ");
+            System.out.println("추가 할 책 price를 입력하세요 : ");
             price = scan.nextLine();
 
             stmt.setInt(1, Integer.parseInt(Book_id));
@@ -94,7 +95,7 @@ public class Main
             stmt.setString(4, price);
 
             int result = stmt.executeUpdate();
-            if(result ==1) System.out.println("inset 저장 성공!");
+            if(result ==1) System.out.println("Inset 저장 성공!");
             else System.out.println("저장 실패");
 
         } catch (Exception e) {
